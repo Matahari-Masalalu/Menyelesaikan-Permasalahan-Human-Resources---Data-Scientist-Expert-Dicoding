@@ -3,84 +3,134 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from pycaret.classification import load_model, predict_model
 
+st.set_page_config(page_title="HR Tools PT Jaya Jaya Maju", layout="wide")
 
-# Load model
-model = load_model("model_attrition")
+# Fungsi untuk homepage
+def home_page():
+    st.title('Dashboard')
+    st.write('Selamat datang di homepage!')
 
-st.set_page_config(page_title="Attrition Probability Predictor", layout="wide")
-st.title("🔮 Employee Attrition Probability Predictor")
-st.markdown("Masukkan data karyawan di bawah ini untuk memprediksi kemungkinan karyawan akan resign atau tetap.")
+# Fungsi untuk halaman prediksi
+def predict_page():
+    # Load model
+    model = load_model("model_attrition")
 
-with st.form("prediction_form"):
-    col1, col2, col3 = st.columns(3)
+    st.markdown("<h1 style='text-align: center;'>🔮 Prediksi Resign Karyawan (Attrition)</h1>", unsafe_allow_html=True)
 
-    with col1:
-        age = st.slider("Age", 18, 60, 30)
-        daily_rate = st.number_input("Daily Rate", min_value=0)
-        distance_from_home = st.slider("Distance From Home", 0, 50, 10)
-        education = st.selectbox("Education Level", [1, 2, 3, 4, 5])
-        environment_satisfaction = st.selectbox("Environment Satisfaction", [1, 2, 3, 4])
-        gender = st.selectbox("Gender", ["Male", "Female"])
-        hourly_rate = st.number_input("Hourly Rate", min_value=0)
-        job_involvement = st.selectbox("Job Involvement", [1, 2, 3, 4])
+    with st.form("form"):
+        col1, col2, col3 = st.columns(3)
 
-    with col2:
-        job_level = st.selectbox("Job Level", [1, 2, 3, 4, 5])
-        job_satisfaction = st.selectbox("Job Satisfaction", [1, 2, 3, 4])
-        marital_status = st.selectbox("Marital Status", ["Single", "Married", "Divorced"])
-        monthly_income = st.number_input("Monthly Income", min_value=0)
-        num_companies_worked = st.slider("Num Companies Worked", 0, 10, 1)
-        over_time = st.selectbox("Over Time", ["Yes", "No"])
-        percent_salary_hike = st.slider("Percent Salary Hike", 0, 100, 15)
-        performance_rating = st.selectbox("Performance Rating", [1, 2, 3, 4])
+        with col1:
+            MonthlyIncome = st.number_input("Monthly Income 💰", 1000, 20000, 5000)
+            MonthlyRate = st.number_input("Monthly Rate 📈", 1000, 25000, 10000)
+            DailyRate = st.number_input("Daily Rate 💸", 100, 1500, 500)
+            Department = st.selectbox("Departemen 🏢", ["Sales", "Research & Development", "Human Resources"])
+            DistanceFromHome = st.number_input("Jarak dari Rumah 🏠", 1, 30, 10)
+            Education = st.selectbox("Pendidikan 🎓", [1, 2, 3, 4, 5])
+            EducationField = st.selectbox("Bidang Pendidikan 📘", ["Life Sciences", "Other", "Medical", "Marketing", "Technical Degree", "Human Resources"])
+            EnvironmentSatisfaction = st.selectbox("Environment Satisfaction 🌿", [1, 2, 3, 4])
+            BusinessTravel = st.selectbox("Perjalanan Bisnis ✈️", ["Travel_Rarely", "Travel_Frequently", "Non-Travel"])
+            Gender = st.selectbox("Jenis Kelamin 🚻", ["Male", "Female"])
+            
 
-    with col3:
-        relationship_satisfaction = st.selectbox("Relationship Satisfaction", [1, 2, 3, 4])
-        stock_option_level = st.selectbox("Stock Option Level", [0, 1, 2, 3])
-        total_working_years = st.slider("Total Working Years", 0, 40, 10)
-        training_times_last_year = st.slider("Training Times Last Year", 0, 10, 2)
-        work_life_balance = st.selectbox("Work Life Balance", [1, 2, 3, 4])
-        years_at_company = st.slider("Years At Company", 0, 40, 5)
-        years_in_current_role = st.slider("Years In Current Role", 0, 20, 3)
-        years_since_last_promotion = st.slider("Years Since Last Promotion", 0, 15, 1)
-        years_with_curr_manager = st.slider("Years With Current Manager", 0, 20, 4)
+        with col2:
+            Age = st.slider("Umur", 18, 60, 30)
+            HourlyRate = st.slider("Hourly Rate 💵", 30, 100, 60)
+            PercentSalaryHike = st.slider("Kenaikan Gaji (%) 💸", 10, 25, 15)
+            YearsAtCompany = st.slider("Tahun di Perusahaan 🏢", 0, 40, 5)
+            YearsInCurrentRole = st.slider("Tahun di Posisi Saat Ini 💼", 0, 18, 3)
+            YearsSinceLastPromotion = st.slider("Tahun Sejak Promosi Terakhir ⏳", 0, 15, 2)
+            YearsWithCurrManager = st.slider("Tahun dengan Manajer Saat Ini 👨‍💼", 0, 17, 3)
+            TotalWorkingYears = st.slider("Total Tahun Pengalaman 🧠", 0, 40, 10)
+            TrainingTimesLastYear = st.slider("Jumlah Pelatihan Tahun Ini 📚", 0, 10, 3)
+            NumCompaniesWorked = st.slider("Jumlah Perusahaan Pernah Bekerja 🏭", 0, 10, 2)
+            
+            
+            
 
-    st.markdown("---")
-    submitted = st.form_submit_button("Predict Attrition Probability")
+        with col3:
+            OverTime = st.selectbox("Lembur 🕒", ["Yes", "No"])
+            JobInvolvement = st.selectbox("Job Involvement 👨‍💼", [1, 2, 3, 4])
+            JobLevel = st.selectbox("Job Level 📊", [1, 2, 3, 4, 5])
+            JobRole = st.selectbox("Job Role 💼", ["Sales Executive", "Research Scientist", "Laboratory Technician", 
+                                                "Manufacturing Director", "Healthcare Representative", "Manager", 
+                                                "Sales Representative", "Research Director", "Human Resources"])
+            JobSatisfaction = st.selectbox("Job Satisfaction 😊", [1, 2, 3, 4])
+            PerformanceRating = st.selectbox("Performance Rating ⭐", [1, 2, 3, 4])
+            RelationshipSatisfaction = st.selectbox("Relationship Satisfaction ❤️", [1, 2, 3, 4])
+            StockOptionLevel = st.selectbox("Stock Option Level 📈", [0, 1, 2, 3])
+            WorkLifeBalance = st.selectbox("Work Life Balance ⚖️", [1, 2, 3, 4])
+            MaritalStatus = st.selectbox("Status Pernikahan 💍", ["Single", "Married", "Divorced"])
 
-if submitted:
-    input_dict = {
-        "age": age,
-        "daily_rate": daily_rate,
-        "distance_from_home": distance_from_home,
-        "education": education,
-        "environment_satisfaction": environment_satisfaction,
-        "gender": 1 if gender == "Male" else 0,
-        "hourly_rate": hourly_rate,
-        "job_involvement": job_involvement,
-        "job_level": job_level,
-        "job_satisfaction": job_satisfaction,
-        "marital_status": 1 if marital_status == "Single" else (2 if marital_status == "Married" else 3),
-        "monthly_income": monthly_income,
-        "num_companies_worked": num_companies_worked,
-        "over_time": 1 if over_time == "Yes" else 0,
-        "percent_salary_hike": percent_salary_hike,
-        "performance_rating": performance_rating,
-        "relationship_satisfaction": relationship_satisfaction,
-        "stock_option_level": stock_option_level,
-        "total_working_years": total_working_years,
-        "training_times_last_year": training_times_last_year,
-        "work_life_balance": work_life_balance,
-        "years_at_company": years_at_company,
-        "years_in_current_role": years_in_current_role,
-        "years_since_last_promotion": years_since_last_promotion,
-        "years_with_curr_manager": years_with_curr_manager,
+        col_left, col_mid, col_right = st.columns([3,1,3])
+
+        with col_mid:
+            submitted = st.form_submit_button("🔍 Prediksi")
+
+    if submitted:
+        input_dict = {
+            'Age': Age,
+            'BusinessTravel': BusinessTravel,
+            'DailyRate': DailyRate,
+            'Department': Department,
+            'DistanceFromHome': DistanceFromHome,
+            'Education': Education,
+            'EducationField': EducationField,
+            'EnvironmentSatisfaction': EnvironmentSatisfaction,
+            'Gender': Gender,
+            'HourlyRate': HourlyRate,
+            'JobInvolvement': JobInvolvement,
+            'JobLevel': JobLevel,
+            'JobRole': JobRole,
+            'JobSatisfaction': JobSatisfaction,
+            'MaritalStatus': MaritalStatus,
+            'MonthlyIncome': MonthlyIncome,
+            'MonthlyRate': MonthlyRate,
+            'NumCompaniesWorked': NumCompaniesWorked,
+            'OverTime': OverTime,
+            'PercentSalaryHike': PercentSalaryHike,
+            'PerformanceRating': PerformanceRating,
+            'RelationshipSatisfaction': RelationshipSatisfaction,
+            'StockOptionLevel': StockOptionLevel,
+            'TotalWorkingYears': TotalWorkingYears,
+            'TrainingTimesLastYear': TrainingTimesLastYear,
+            'WorkLifeBalance': WorkLifeBalance,
+            'YearsAtCompany': YearsAtCompany,
+            'YearsInCurrentRole': YearsInCurrentRole,
+            'YearsSinceLastPromotion': YearsSinceLastPromotion,
+            'YearsWithCurrManager': YearsWithCurrManager,
+        }
+
+        input_df = pd.DataFrame([input_dict])
+
+        for col in input_df.select_dtypes(include='object').columns:
+            le = LabelEncoder()
+            input_df[col] = le.fit_transform(input_df[col])
+        hasil = predict_model(model, data=input_df)
+        pred = hasil['prediction_label'][0]
+        prob = hasil['prediction_score'][0]
+
+        st.markdown("---")
+        st.markdown("<h3>🎯 Hasil Prediksi:</h3>", unsafe_allow_html=True)
+        st.write(hasil)
+        if pred == 1:
+            st.warning("Karyawan ini berpotensi resign!😢")
+        else:
+            st.success("Karyawan ini tidak berpotensi resign!😄")
+        st.info(f"🎯 Probabilitas: **{round(prob*100, 2)}%**")
+
+# Toggle burger menggunakan sidebar
+def toggle_burger():
+    pages = {
+        'Home': home_page,
+        'Predict Featur': predict_page,
     }
+    st.sidebar.title("PT Maju Jaya Jaya")
+    st.sidebar.image("logo2.png", width=200)
+    page = st.sidebar.selectbox('Pilih Halaman', list(pages.keys()))
 
-    input_df = pd.DataFrame([input_dict])
-    prediction = model.predict_proba(input_df)[0]
-    attrition_prob = round(prediction[1] * 100, 2)
-    stay_prob = round(prediction[0] * 100, 2)
+    # Panggil halaman yang dipilih
+    pages[page]()
 
-    st.success(f"🎯 Kemungkinan karyawan ini akan *resign*: {attrition_prob}%")
-    st.info(f"✅ Kemungkinan akan *tetap bekerja*: {stay_prob}%")
+if __name__ == '__main__':
+    toggle_burger()
