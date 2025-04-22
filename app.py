@@ -5,7 +5,7 @@ from pycaret.classification import load_model, predict_model
 
 
 # Load model
-model = load_model("model_attrition.pkl")
+model = load_model("model_attrition")
 
 st.set_page_config(page_title="Attrition Probability Predictor", layout="wide")
 st.title("🔮 Employee Attrition Probability Predictor")
