@@ -1,9 +1,11 @@
 import streamlit as st
 import pandas as pd
-import joblib
+from sklearn.preprocessing import LabelEncoder
+from pycaret.classification import load_model, predict_model
+
 
 # Load model
-model = joblib.load("model_attrition.pkl")
+model = load_model("model_attrition.pkl")
 
 st.set_page_config(page_title="Attrition Probability Predictor", layout="wide")
 st.title("🔮 Employee Attrition Probability Predictor")
