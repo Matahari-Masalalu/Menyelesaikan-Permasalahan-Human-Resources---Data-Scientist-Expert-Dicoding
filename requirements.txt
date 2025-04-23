@@ -1,9 +1,4 @@
-pandas
-imbalanced-learn
-matplotlib
-seaborn
-scikit-learn
-pycaret
 streamlit
-scipy
+scikit-learn
+pandas
 joblib
