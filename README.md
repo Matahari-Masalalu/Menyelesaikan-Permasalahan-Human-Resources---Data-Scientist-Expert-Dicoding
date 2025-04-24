@@ -44,9 +44,9 @@ Komponen Dashboard:
 
 - Work Life Balance : Karyawan dengan WLB "Excellent" cenderung bertahan. Nilai "Bad" memiliki attrition lebih tinggi.
 
-- Overall Attrition Distribution : 16.99% dari seluruh karyawan mengalami attrition (berdasarkan donut chart utama).
+- Overall Attrition Distribution : 16.99% dari seluruh karyawan mengalami attrition (berdasarkan pie chart utama).
 
-- Attrition vs Overtime Status : Karyawan yang bekerja lembur memiliki kecenderungan keluar lebih besar. Contoh: 81 dari 670 karyawan yang lembur mengalami attrition.
+- Attrition vs Overtime Status : Karyawan yang bekerja lembur memiliki kecenderungan keluar lebih besar. Contoh: 81 dari 179 karyawan yang lembur mengalami attrition.
 
 - Job Satisfaction by Role and Attrition : Menunjukkan distribusi attrition berdasarkan peran dan tingkat kepuasan kerja. Beberapa role seperti Sales Executive dan Laboratory Technician menunjukkan tingkat attrition tinggi.
 
@@ -97,3 +97,7 @@ K-Nearest Neighbors (KNN) Classifier adalah algoritma sederhana dan fleksibel ya
 - Karena Sales Executive merupakan peran dengan attrition tertinggi, disarankan: Melakukan audit mendalam terhadap job description, target penjualan, dan budaya kerja di posisi ini. Menilai apakah ekspektasi realistis dan mendukung kesejahteraan karyawan. Kembangkan Program Retensi, Pelatihan, dan Engagement
 - Fokus pada peningkatan kepuasan kerja dan lingkungan melalui: Program pelatihan pengembangan karier. Coaching dan mentoring rutin. Forum komunikasi dua arah antara manajemen dan karyawan. Lakukan Exit Interview yang Terstruktur dan Analitis
 - Gunakan hasil exit interview sebagai umpan balik sistematis untuk: Mengidentifikasi akar masalah berdasarkan role, departemen, dan kepuasan kerja. Mengintegrasikan temuan ini ke dalam strategi HR untuk mencegah attrition di masa depan.
+
+** Referensi
+1. fahadrehman07 - Kagle. Diakses pada 20 April 2025 dari (https://www.kaggle.com/code/fahadrehman07/salifort-motors-providing-data-driven-suggestions)
+2. Google Colab. Diakses pada 20 April 2025 dari (https://colab.research.google.com/drive/1iVo19vQtD5hk-Kcjuqb2Vg33bMnA1vLu?usp=sharing)
