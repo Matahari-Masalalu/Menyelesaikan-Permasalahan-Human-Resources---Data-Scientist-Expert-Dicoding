@@ -13,10 +13,10 @@
 ## Cakupan Proyek
 
 - Analisis faktor-faktor penyebab attrition.
+- - Visualisasi data dan insight melalui **Tableau Public**.
 - Pembuatan model machine learning menggunakan **Extra Trees Classifier**.
-- Visualisasi data dan insight melalui **Tableau Public**.
 
-## Persiapan dan Setup
+## Persiapan
 
 ### Sumber Data
 Dataset diambil dari:  
@@ -24,9 +24,9 @@ Dataset diambil dari:
 
 ## Dashboard Analitik - Looker Studio
 untuk link dashboard
-link dashboard 1 : https://public.tableau.com/views/JayaJayaMajuDicoding/Dashboard3?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+link dashboard 1 : [link dashboard 11](https://public.tableau.com/views/JayaJayaMajuDicoding/Dashboard3?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
-link dashboard 2 : https://public.tableau.com/views/JayaJayaMajuDicoding2/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+link dashboard 2 : [link dashboard 2](https://public.tableau.com/views/JayaJayaMajuDicoding2/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ![image](https://github.com/user-attachments/assets/24963151-707c-43b6-8540-8d008e210d54)
 ![image](https://github.com/user-attachments/assets/c3c43c23-1ace-4c3f-8efa-d20b75741ade)
