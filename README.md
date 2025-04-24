@@ -14,8 +14,7 @@
 
 - Analisis faktor-faktor penyebab attrition.
 - Pembuatan model machine learning menggunakan **Extra Trees Classifier**.
-- Deploy model ke aplikasi berbasis **Streamlit**.
-- Visualisasi data dan insight melalui **Looker Studio Dashboard**.
+- Visualisasi data dan insight melalui **Tableau Public**.
 
 ## Persiapan dan Setup
 
