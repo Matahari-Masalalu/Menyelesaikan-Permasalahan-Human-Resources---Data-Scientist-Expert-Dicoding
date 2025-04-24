@@ -13,7 +13,7 @@
 ## Cakupan Proyek
 
 - Analisis faktor-faktor penyebab attrition.
-- - Visualisasi data dan insight melalui **Tableau Public**.
+- Visualisasi data dan insight melalui **Tableau Public**.
 - Pembuatan model machine learning menggunakan **Extra Trees Classifier**.
 
 ## Persiapan
