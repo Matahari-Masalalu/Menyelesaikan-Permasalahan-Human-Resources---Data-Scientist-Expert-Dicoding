@@ -35,9 +35,7 @@ link dashboard 2 : https://public.tableau.com/views/JayaJayaMajuDicoding2/Dashbo
 
 Komponen Dashboard:
 
-### Education & Department Distribution
-
-Mayoritas karyawan berlatar pendidikan Bachelor, dan departemen terbesar adalah R&D.
+- Education & Department Distribution : Mayoritas karyawan berlatar pendidikan Bachelor, dan departemen terbesar adalah R&D.
 
 ### Job Satisfaction
 Sekitar 60% karyawan memiliki kepuasan kerja tinggi, namun attrition tetap terjadi di berbagai level.
