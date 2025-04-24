@@ -37,34 +37,27 @@ Komponen Dashboard:
 
 - Education & Department Distribution : Mayoritas karyawan berlatar pendidikan Bachelor, dan departemen terbesar adalah R&D.
 
-### Job Satisfaction
-Sekitar 60% karyawan memiliki kepuasan kerja tinggi, namun attrition tetap terjadi di berbagai level.
+- Job Satisfaction : Sekitar 60% karyawan memiliki kepuasan kerja tinggi, namun attrition tetap terjadi di berbagai level.
 
-### Environment Satisfaction
-Tingkat kepuasan lingkungan kerja sangat memengaruhi keputusan keluar.
+- Environment Satisfaction : Tingkat kepuasan lingkungan kerja sangat memengaruhi keputusan keluar.
 
-### Work Life Balance
-Karyawan dengan WLB "Excellent" cenderung bertahan. Nilai "Bad" memiliki attrition lebih tinggi.
+- Work Life Balance : Karyawan dengan WLB "Excellent" cenderung bertahan. Nilai "Bad" memiliki attrition lebih tinggi.
 
-### Overall Attrition Distribution
-16.99% dari seluruh karyawan mengalami attrition (berdasarkan donut chart utama).
+- Overall Attrition Distribution : 16.99% dari seluruh karyawan mengalami attrition (berdasarkan donut chart utama).
 
-### Attrition vs Overtime Status
-Karyawan yang bekerja lembur memiliki kecenderungan keluar lebih besar. Contoh: 81 dari 670 karyawan yang lembur mengalami attrition.
+- Attrition vs Overtime Status : Karyawan yang bekerja lembur memiliki kecenderungan keluar lebih besar. Contoh: 81 dari 670 karyawan yang lembur mengalami attrition.
 
-### Job Satisfaction by Role and Attrition
-Menunjukkan distribusi attrition berdasarkan peran dan tingkat kepuasan kerja. Beberapa role seperti Sales Executive dan Laboratory Technician menunjukkan tingkat attrition tinggi.
+- Job Satisfaction by Role and Attrition : Menunjukkan distribusi attrition berdasarkan peran dan tingkat kepuasan kerja. Beberapa role seperti Sales Executive dan Laboratory Technician menunjukkan tingkat attrition tinggi.
 
-### Environment Satisfaction by Role and Attrition
-Role tertentu dengan kepuasan lingkungan kerja rendah menunjukkan peningkatan risiko attrition.
+- Environment Satisfaction by Role and Attrition : Role tertentu dengan kepuasan lingkungan kerja rendah menunjukkan peningkatan risiko attrition.
 
-## 🤖 Sistem Machine Learning
+## Sistem Machine Learning
 
-### 📌 Eksperimen Model
+### Eksperimen Model
 
 Proses pemodelan dilakukan menggunakan framework **PyCaret** yang memungkinkan perbandingan otomatis berbagai algoritma klasifikasi.
 
-#### ⚙️ Langkah-langkah:
+#### Langkah-langkah:
 1. Preprocessing data (handling kategorikal, numerik, dan missing value).
 2. Inisialisasi setup PyCaret dengan target = `Attrition`.
 3. Evaluasi dan bandingkan berbagai model berdasarkan metrik berikut:
@@ -81,22 +74,13 @@ Proses pemodelan dilakukan menggunakan framework **PyCaret** yang memungkinkan p
 
 Dari hasil eksperimen, model **K Neighbors Classifier** dipilih sebagai model terbaik berdasarkan keseimbangan skor di seluruh metrik tersebut.
 
-### 📌 Model Terpilih:
+###  Model Terpilih:
 - **K Neighbors Classifier**  
 K-Nearest Neighbors (KNN) Classifier adalah algoritma sederhana dan fleksibel yang tidak memerlukan pelatihan model sebelumnya. KNN bekerja dengan menghitung jarak ke tetangga terdekat untuk melakukan prediksi, sehingga cocok untuk tugas klasifikasi dan regresi. Keunggulannya termasuk kemudahan implementasi, akurasi yang baik pada data sederhana, serta tidak bergantung pada asumsi distribusi data. Namun, KNN bisa lambat pada dataset besar karena harus menghitung jarak ke semua data setiap kali prediksi.
 
 ---
 
-### 🌐 Akses Aplikasi:
-🔗 [Buka Aplikasi Streamlit](https://zainalfatt-idcamp-data-scientist-terapan-dicoding-proyek-perta.streamlit.app/)
-
-### 📋 Fitur Aplikasi:
-- ✅ Form input untuk memprediksi status attrition berdasarkan karakteristik karyawan.
-- 🔍 Validasi input otomatis.
-- 📊 Prediksi real-time dengan tampilan **confidence score**.
-
-
-✅ Kesimpulan
+## Kesimpulan
 Overtime adalah indikator kuat terhadap keputusan karyawan untuk keluar.
 
 Karyawan dengan Work-Life Balance rendah (nilai 1-2) memiliki proporsi keluar yang lebih tinggi.
@@ -105,7 +89,7 @@ Sales menjadi departemen dengan attrition rate tertinggi (20.69%).
 
 Model Extra Trees bekerja baik dalam memprediksi potensi keluar karyawan.
 
-📌 Rekomendasi Action Items
+## Rekomendasi Action Items
 Evaluasi kebijakan lembur dan beban kerja.
 
 Perkuat program keseimbangan kerja dan kehidupan pribadi (WLB).
