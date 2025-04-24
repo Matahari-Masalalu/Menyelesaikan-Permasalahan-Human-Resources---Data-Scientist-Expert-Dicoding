@@ -58,9 +58,11 @@ Komponen Dashboard:
 Proses pemodelan dilakukan menggunakan framework **PyCaret** yang memungkinkan perbandingan otomatis berbagai algoritma klasifikasi.
 
 #### Langkah-langkah:
-1. Preprocessing data (handling kategorikal, numerik, dan missing value).
-2. Inisialisasi setup PyCaret dengan target = `Attrition`.
-3. Evaluasi dan bandingkan berbagai model berdasarkan metrik berikut:
+1. Preprocessing data: Meliputi penanganan fitur kategorikal, numerik, dan missing value. Selain itu, dilakukan feature selection menggunakan RFE (Recursive Feature Elimination) untuk memilih fitur terbaik, serta penanganan data tidak seimbang menggunakan SMOTE (Synthetic Minority Over-sampling Technique).
+
+2. Inisialisasi setup PyCaret dengan target = Attrition.
+
+3. Evaluasi dan bandingkan berbagai model berdasarkan metrik seperti accuracy, AUC, recall, dan F1-score.
 
 | Metrik Evaluasi | Deskripsi |
 |-----------------|-----------|
@@ -81,23 +83,16 @@ K-Nearest Neighbors (KNN) Classifier adalah algoritma sederhana dan fleksibel ya
 ---
 
 ## Kesimpulan
-Overtime adalah indikator kuat terhadap keputusan karyawan untuk keluar.
+- Grafik "Attrition vs Overtime Status" menunjukkan bahwa karyawan yang bekerja lembur memiliki kemungkinan keluar yang jauh lebih tinggi. Dari 179 karyawan yang lembur, 98 orang mengalami attrition (sekitar 55%), jauh lebih tinggi dibandingkan mereka yang tidak lembur. Ini memperkuat bahwa overtime adalah salah satu faktor paling signifikan dalam keputusan karyawan untuk meninggalkan perusahaan.
 
-Karyawan dengan Work-Life Balance rendah (nilai 1-2) memiliki proporsi keluar yang lebih tinggi.
+- Dari grafik distribusi berdasarkan peran, terlihat bahwa posisi Sales Executive mendominasi jumlah attrition di hampir semua level kepuasan lingkungan dan pekerjaan. Meskipun bukan satu-satunya peran dengan tingkat keluar yang tinggi, jumlah karyawan keluar dari posisi ini secara absolut adalah yang tertinggi, menunjukkan bahwa divisi ini perlu perhatian lebih. Jadi, bukan seluruh departemen Sales, tapi spesifik pada Sales Executive.
 
-Sales menjadi departemen dengan attrition rate tertinggi (20.69%).
+- Karyawan dengan kepuasan rendah terhadap lingkungan kerja maupun pekerjaan lebih cenderung keluar, terlihat dari tingginya jumlah attrition (warna oranye) pada kategori "Low" di kedua grafik Job Satisfaction dan Environment Satisfaction. Hal ini menekankan pentingnya menciptakan lingkungan kerja yang positif dan memberikan pekerjaan yang memuaskan untuk menekan attrition.
 
-Model Extra Trees bekerja baik dalam memprediksi potensi keluar karyawan.
+- Dengan pola attrition yang cukup jelas (misalnya keterkaitan dengan overtime dan kepuasan), model seperti Extra Trees Classifier yang bekerja baik pada data tabular dan mampu menangani non-linearitas bisa sangat efektif untuk memprediksi attrition. Model ini cocok untuk digunakan sebagai dasar sistem peringatan dini bagi HR dalam mengantisipasi potensi kehilangan karyawan.
 
 ## Rekomendasi Action Items
-Evaluasi kebijakan lembur dan beban kerja.
-
-Perkuat program keseimbangan kerja dan kehidupan pribadi (WLB).
-
-Audit internal untuk departemen dengan tingkat keluar tinggi.
-
-Kembangkan program retensi, pelatihan, dan engagement.
-
-Lakukan exit interview untuk menemukan akar masalah attrition.
-
-Proyek ini diharapkan menjadi solusi prediktif dan strategis bagi tim HR dalam menurunkan angka attrition serta meningkatkan kepuasan dan retensi karyawan.
+- Karena lembur terbukti sebagai indikator kuat attrition, perusahaan perlu Meninjau ulang distribusi beban kerja dan Menerapkan pembatasan jam lembur. Memastikan lembur bersifat sukarela dan diberikan kompensasi yang adil. Melacak pola lembur sebagai indikator risiko resign secara proaktif.
+- Karena Sales Executive merupakan peran dengan attrition tertinggi, disarankan: Melakukan audit mendalam terhadap job description, target penjualan, dan budaya kerja di posisi ini. Menilai apakah ekspektasi realistis dan mendukung kesejahteraan karyawan. Kembangkan Program Retensi, Pelatihan, dan Engagement
+- Fokus pada peningkatan kepuasan kerja dan lingkungan melalui: Program pelatihan pengembangan karier. Coaching dan mentoring rutin. Forum komunikasi dua arah antara manajemen dan karyawan. Lakukan Exit Interview yang Terstruktur dan Analitis
+- Gunakan hasil exit interview sebagai umpan balik sistematis untuk: Mengidentifikasi akar masalah berdasarkan role, departemen, dan kepuasan kerja. Mengintegrasikan temuan ini ke dalam strategi HR untuk mencegah attrition di masa depan.
