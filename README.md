@@ -98,6 +98,6 @@ K-Nearest Neighbors (KNN) Classifier adalah algoritma sederhana dan fleksibel ya
 - Fokus pada peningkatan kepuasan kerja dan lingkungan melalui: Program pelatihan pengembangan karier. Coaching dan mentoring rutin. Forum komunikasi dua arah antara manajemen dan karyawan. Lakukan Exit Interview yang Terstruktur dan Analitis
 - Gunakan hasil exit interview sebagai umpan balik sistematis untuk: Mengidentifikasi akar masalah berdasarkan role, departemen, dan kepuasan kerja. Mengintegrasikan temuan ini ke dalam strategi HR untuk mencegah attrition di masa depan.
 
-** Referensi
+## Referensi
 1. fahadrehman07 - Kagle. Diakses pada 20 April 2025 dari (https://www.kaggle.com/code/fahadrehman07/salifort-motors-providing-data-driven-suggestions)
 2. Google Colab. Diakses pada 20 April 2025 dari (https://colab.research.google.com/drive/1iVo19vQtD5hk-Kcjuqb2Vg33bMnA1vLu?usp=sharing)
