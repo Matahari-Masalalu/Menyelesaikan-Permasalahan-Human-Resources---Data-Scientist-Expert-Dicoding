@@ -1,4 +1,4 @@
-# Proyek Akhir: Prediksi Tingkat Attrition di Perusahaan Jaya Jaya Maju
+# Proyek Akhir: Menyelesaikan Permasalahan Human Resources di Perusahaan Jaya Jaya Maju
 
 ## Business Understanding
 
