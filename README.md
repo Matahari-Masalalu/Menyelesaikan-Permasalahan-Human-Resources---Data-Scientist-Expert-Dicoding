@@ -51,27 +51,52 @@ Karyawan dengan WLB "Excellent" cenderung bertahan. Nilai "Bad" memiliki attriti
 ### Overall Attrition Distribution
 16.99% dari seluruh karyawan mengalami attrition (berdasarkan donut chart utama).
 
-### Job Satisfaction by Role and Attrition
-Menunjukkan distribusi attrition berdasarkan peran dan tingkat kepuasan kerja. Beberapa role seperti Sales Executive dan Laboratory Technician menunjukkan tingkat attrition tinggi.
-
 ### Attrition vs Overtime Status
 Karyawan yang bekerja lembur memiliki kecenderungan keluar lebih besar. Contoh: 81 dari 670 karyawan yang lembur mengalami attrition.
 
+### Job Satisfaction by Role and Attrition
+Menunjukkan distribusi attrition berdasarkan peran dan tingkat kepuasan kerja. Beberapa role seperti Sales Executive dan Laboratory Technician menunjukkan tingkat attrition tinggi.
+
 ### Environment Satisfaction by Role and Attrition
 Role tertentu dengan kepuasan lingkungan kerja rendah menunjukkan peningkatan risiko attrition.
-🤖 Sistem Machine Learning
-📌 Algoritma:
-Extra Trees Classifier — handal untuk data kategori & numerik.
 
-🌐 Akses Aplikasi:
-🔗 Buka Aplikasi Streamlit
+## 🤖 Sistem Machine Learning
 
-📋 Fitur:
-Form input untuk prediksi status attrition.
+### 📌 Eksperimen Model
 
-Validasi input dan prediksi otomatis berdasarkan data.
+Proses pemodelan dilakukan menggunakan framework **PyCaret** yang memungkinkan perbandingan otomatis berbagai algoritma klasifikasi.
 
-Tampilan hasil dan confidence score.
+#### ⚙️ Langkah-langkah:
+1. Preprocessing data (handling kategorikal, numerik, dan missing value).
+2. Inisialisasi setup PyCaret dengan target = `Attrition`.
+3. Evaluasi dan bandingkan berbagai model berdasarkan metrik berikut:
+
+| Metrik Evaluasi | Deskripsi |
+|-----------------|-----------|
+| **Accuracy**    | Ketepatan model secara keseluruhan |
+| **AUC (ROC)**   | Kemampuan model membedakan kelas |
+| **Recall**      | Kemampuan mendeteksi karyawan yang benar-benar keluar |
+| **Precision**   | Akurasi dari prediksi keluar |
+| **F1-score**    | Harmoni antara Recall dan Precision |
+| **Kappa**       | Agreement antara prediksi dan aktual |
+| **MCC**         | Korelasi antara label aktual dan prediksi |
+
+Dari hasil eksperimen, model **K Neighbors Classifier** dipilih sebagai model terbaik berdasarkan keseimbangan skor di seluruh metrik tersebut.
+
+### 📌 Model Terpilih:
+- **K Neighbors Classifier**  
+K-Nearest Neighbors (KNN) Classifier adalah algoritma sederhana dan fleksibel yang tidak memerlukan pelatihan model sebelumnya. KNN bekerja dengan menghitung jarak ke tetangga terdekat untuk melakukan prediksi, sehingga cocok untuk tugas klasifikasi dan regresi. Keunggulannya termasuk kemudahan implementasi, akurasi yang baik pada data sederhana, serta tidak bergantung pada asumsi distribusi data. Namun, KNN bisa lambat pada dataset besar karena harus menghitung jarak ke semua data setiap kali prediksi.
+
+---
+
+### 🌐 Akses Aplikasi:
+🔗 [Buka Aplikasi Streamlit](https://zainalfatt-idcamp-data-scientist-terapan-dicoding-proyek-perta.streamlit.app/)
+
+### 📋 Fitur Aplikasi:
+- ✅ Form input untuk memprediksi status attrition berdasarkan karakteristik karyawan.
+- 🔍 Validasi input otomatis.
+- 📊 Prediksi real-time dengan tampilan **confidence score**.
+
 
 ✅ Kesimpulan
 Overtime adalah indikator kuat terhadap keputusan karyawan untuk keluar.
