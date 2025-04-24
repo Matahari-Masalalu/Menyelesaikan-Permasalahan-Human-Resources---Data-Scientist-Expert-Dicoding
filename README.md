@@ -23,7 +23,8 @@ Dataset diambil dari:
 🔗 [Employee Data - GitHub](https://github.com/dicodingacademy/dicoding_dataset/blob/main/employee/employee_data.csv)
 
 ## Dashboard Analitik - Looker Studio
-untuk link dashboard
+untuk link dashboard bisa diakses melalui
+
 link dashboard 1 : [link dashboard 11](https://public.tableau.com/views/JayaJayaMajuDicoding/Dashboard3?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 link dashboard 2 : [link dashboard 2](https://public.tableau.com/views/JayaJayaMajuDicoding2/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
