@@ -1,29 +1,29 @@
-# 🎓 Proyek Akhir: Prediksi Tingkat Attrition di Perusahaan Jaya Jaya Maju
+# Proyek Akhir: Prediksi Tingkat Attrition di Perusahaan Jaya Jaya Maju
 
-## 🧠 Business Understanding
+## Business Understanding
 
 **Jaya Jaya Maju** adalah perusahaan multinasional yang telah berdiri sejak tahun 2000 dan memiliki lebih dari 1000 karyawan. Perusahaan ini menghadapi tantangan dalam hal tingginya tingkat *attrition* (pergantian karyawan), yang berdampak negatif terhadap operasional dan biaya.
 
-## ❓ Permasalahan Bisnis
+## Permasalahan Bisnis
 
 - Tingginya tingkat attrition (>10%) menyebabkan gangguan produktivitas dan beban rekrutmen baru.
 - Tidak adanya alat prediktif untuk mendeteksi karyawan yang berpotensi resign.
 - Perlu solusi berbasis data untuk pengambilan keputusan di departemen HR.
 
-## 🎯 Cakupan Proyek
+## Cakupan Proyek
 
 - Analisis faktor-faktor penyebab attrition.
 - Pembuatan model machine learning menggunakan **Extra Trees Classifier**.
 - Deploy model ke aplikasi berbasis **Streamlit**.
 - Visualisasi data dan insight melalui **Looker Studio Dashboard**.
 
-## 🔧 Persiapan dan Setup
+## Persiapan dan Setup
 
-### 📦 Sumber Data
+### Sumber Data
 Dataset diambil dari:  
 🔗 [Employee Data - GitHub](https://github.com/dicodingacademy/dicoding_dataset/blob/main/employee/employee_data.csv)
 
-##📊 Dashboard Analitik - Looker Studio
+## Dashboard Analitik - Looker Studio
 untuk link dashboard
 link dashboard 1 : https://public.tableau.com/views/JayaJayaMajuDicoding/Dashboard3?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
@@ -35,28 +35,30 @@ link dashboard 2 : https://public.tableau.com/views/JayaJayaMajuDicoding2/Dashbo
 
 
 Komponen Dashboard:
-📘 Education & Department Distribution
+
+### Education & Department Distribution
+
 Mayoritas karyawan berlatar pendidikan Bachelor, dan departemen terbesar adalah R&D.
 
-💼 Job Satisfaction
+### Job Satisfaction
 Sekitar 60% karyawan memiliki kepuasan kerja tinggi, namun attrition tetap terjadi di berbagai level.
 
-🌿 Environment Satisfaction
+### Environment Satisfaction
 Tingkat kepuasan lingkungan kerja sangat memengaruhi keputusan keluar.
 
-⚖️ Work Life Balance
+### Work Life Balance
 Karyawan dengan WLB "Excellent" cenderung bertahan. Nilai "Bad" memiliki attrition lebih tinggi.
 
-📉 Overall Attrition Distribution
+### Overall Attrition Distribution
 16.99% dari seluruh karyawan mengalami attrition (berdasarkan donut chart utama).
 
-🧾 Job Satisfaction by Role and Attrition
+### Job Satisfaction by Role and Attrition
 Menunjukkan distribusi attrition berdasarkan peran dan tingkat kepuasan kerja. Beberapa role seperti Sales Executive dan Laboratory Technician menunjukkan tingkat attrition tinggi.
 
-🔁 Attrition vs Overtime Status
+### Attrition vs Overtime Status
 Karyawan yang bekerja lembur memiliki kecenderungan keluar lebih besar. Contoh: 81 dari 670 karyawan yang lembur mengalami attrition.
 
-🌤️ Environment Satisfaction by Role and Attrition
+### Environment Satisfaction by Role and Attrition
 Role tertentu dengan kepuasan lingkungan kerja rendah menunjukkan peningkatan risiko attrition.
 🤖 Sistem Machine Learning
 📌 Algoritma:
